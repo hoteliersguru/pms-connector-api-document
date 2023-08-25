@@ -11,8 +11,8 @@ API PMS Connector for the Channel Manager
 * [API: PushReservation (Recommended)](apis/push-reservation.md)
 * [API: RetrieveReservation](apis/retrieve-reservation.md)
 * [API: AcknowledgeReservation](apis/acknowledge-reservation.md)
-* [StatusCode](apis/appconnect/)
-* [ChannelReferenceID](apis/appconnect/)
-* [CountryCode](apis/appconnect/)
+* [StatusCode](apis/status-code.md)
+* [ChannelReferenceID](apis/channel-reference-id.md)
+* [CountryCode](apis/country-code.md)
 
 ©2023 Hoteliers Dot Guru (Thailand) Co.,Ltd., All rights reserved - Thailand
