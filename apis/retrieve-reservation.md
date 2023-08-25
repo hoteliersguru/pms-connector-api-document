@@ -279,8 +279,8 @@ https://hoteliers.guru/channel-manager/api/pms-connector/reservation
 | pos > channelName                   | String     | Yes     | channel name                                                                                                             |
 | pos > channelReservationID          | String     | Yes     | reservationID from OTA                                                                                                   |
 | roomList                            | Array      | Yes     | list of room on reservation<br/> See [RoomItemSpecification](push-reservation.md#RoomItemSpecification)                  |
-| serviceList                         | Array      | No      | list of service on reservation<br/>See. [ServiceItemSpecification](push-reservation.md#ServiceItemSpecification)         |
-| guestList                           | Array      | No      | list of guest on reservation<br/>See. [GuestItemSpecification](push-reservation.md#GuestItemSpecification)               |
+| serviceList                         | Array      | No      | list of service on reservation<br/>See [ServiceItemSpecification](push-reservation.md#ServiceItemSpecification)          |
+| guestList                           | Array      | No      | list of guest on reservation<br/>See [GuestItemSpecification](push-reservation.md#GuestItemSpecification)                |
 | bookingInformation                  | Object     | Yes     | booking information for reservation<br/>See [BookingInformationSpecific](push-reservation.md#BookingInformationSpecific) |
 
 #### RoomItemSpecification
