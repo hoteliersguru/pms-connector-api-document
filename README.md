@@ -10,7 +10,7 @@ API PMS Connector for the Channel Manager
 * [API: UpdateRoomRate](apis/update-room-rate.md)
 * [API: PushReservation (Recommended)](apis/push-reservation.md)
 * [API: RetrieveReservation](apis/retrieve-reservation.md)
-* [API: AcknowledgeReservation](apis/appconnect/)
+* [API: AcknowledgeReservation](apis/acknowledge-reservation.md)
 * [StatusCode](apis/appconnect/)
 * [ChannelReferenceID](apis/appconnect/)
 * [CountryCode](apis/appconnect/)
