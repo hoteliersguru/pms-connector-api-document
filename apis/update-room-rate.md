@@ -58,28 +58,28 @@ https://hoteliers.guru/channel-manager/api/pms-connector/update-room-rate
 ```
 
 ### Request JSON Data Specification
-| Field Name    | Value Type | Require | Description                                                |
-|---------------|------------|---------|------------------------------------------------------------|
-| timestamp     | String     | Yes     | 2005-08-01T09:30:47+08:00                                  |
-| transactionID | String     | Yes     | UniqID                                                     |
-| username      | String     | Yes     | Username from channel manager                              |
-| password      | String     | Yes     | Password from channel manager                              |
-| pmsRefID      | String     | Yes     | PMS Reference ID                                           |
-| hotelRefID    | String     | Yes     | Hotel Reference ID                                         |
-| periodList    | Array      | Yes     | period update data List<br>**See. PeriodList Specification |
+| Field Name    | Value Type | Require | Description                                                                                  |
+|---------------|------------|---------|----------------------------------------------------------------------------------------------|
+| timestamp     | String     | Yes     | 2005-08-01T09:30:47+08:00                                                                    |
+| transactionID | String     | Yes     | UniqID                                                                                       |
+| username      | String     | Yes     | Username from channel manager                                                                |
+| password      | String     | Yes     | Password from channel manager                                                                |
+| pmsRefID      | String     | Yes     | PMS Reference ID                                                                             |
+| hotelRefID    | String     | Yes     | Hotel Reference ID                                                                           |
+| periodList    | Array      | Yes     | period update data List<br>* <span style="color: orange">**PeriodList Specification**</span> |
 
-- PeriodList Specification
+- <span style="color: orange">**PeriodList Specification**</span>
 
-| Field Name     | Value Type           | Require | Description                                                                 |
-|----------------|----------------------|---------|-----------------------------------------------------------------------------|
-| start          | String : Date Format | Yes     | start date of period eg."2015-07-02"                                        |
-| end            | String : Date Format | Yes     | end date of period eg. "2015-07-15"                                         |
-| roomTypeCode   | String               | No      | room type code                                                              |
-| ratePlanCode   | String               | No      | rate plan code                                                              |
-| applyDayOfWeek | Object               | Yes     | data group for apply day of week<br/>**See. Apply Day Of Week Specification |
-| data           | Object               | Yes     | data group for update data<br/>**See. Data Specification                    |
+| Field Name     | Value Type           | Require | Description                                                                                                   |
+|----------------|----------------------|---------|---------------------------------------------------------------------------------------------------------------|
+| start          | String : Date Format | Yes     | start date of period eg."2015-07-02"                                                                          |
+| end            | String : Date Format | Yes     | end date of period eg. "2015-07-15"                                                                           |
+| roomTypeCode   | String               | No      | room type code                                                                                                |
+| ratePlanCode   | String               | No      | rate plan code                                                                                                |
+| applyDayOfWeek | Object               | Yes     | data group for apply day of week<br/>* <span style="color: orange">**Apply Day Of Week Specification**</span> |
+| data           | Object               | Yes     | data group for update data<br/>* <span style="color: orange">**Data Specification**</span>                    |
 
-- Apply Day Of Week Specification
+- <span style="color: orange">**Apply Day Of Week Specification**</span>
 
 | Field Name | Value Type | Require | Description         |
 |------------|------------|---------|---------------------|
@@ -91,7 +91,7 @@ https://hoteliers.guru/channel-manager/api/pms-connector/update-room-rate
 | sat        | 0, 1       | Yes     | apply for saturday  |
 | sun        | 0, 1       | Yes     | apply for sunday    |
 
-- Data Specification
+- <span style="color: orange">**Data Specification**</span>
 
 | Field Name         | Value Type                  | Require  | Description                                                                 |
 |--------------------|-----------------------------|----------|-----------------------------------------------------------------------------|
