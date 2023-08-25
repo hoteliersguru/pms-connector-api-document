@@ -228,34 +228,34 @@ Channel Manager push reservation data to your PMS
 ---
 
 ### Response JSON Data Specification
-| Field Name      | Value Type | Require | Description                                                                                               |
-|-----------------|------------|---------|-----------------------------------------------------------------------------------------------------------|
-| timestamp       | String     | Yes     | 2005-08-01T09:30:47+08:00                                                                                 |
-| transactionID   | String     | Yes     | UniqID                                                                                                    |
-| hotelRefID      | String     | Yes     | Hotel Reference ID                                                                                        |
-| reservationList | Array      | Yes     | list of reservation item<br/>* <span style="color: orange">**See. Reservation Item specification**</span> |
+| Field Name      | Value Type | Require | Description                                                                                                         |
+|-----------------|------------|---------|---------------------------------------------------------------------------------------------------------------------|
+| timestamp       | String     | Yes     | 2005-08-01T09:30:47+08:00                                                                                           |
+| transactionID   | String     | Yes     | UniqID                                                                                                              |
+| hotelRefID      | String     | Yes     | Hotel Reference ID                                                                                                  |
+| reservationList | Array      | Yes     | list of reservation item<br/> See [ReservationItemSpecification](push-reservation.md#ReservationItemSpecification). |
 
-- <span style="color: orange">**Reservation Item Specification**</span>
+#### ReservationItemSpecification
 
-| Field Name                          | Value Type | Require | Description                                                                                                        |
-|-------------------------------------|------------|---------|--------------------------------------------------------------------------------------------------------------------|
-| uniqueID                            | String     | Yes     | Item uniqID for acknowledge reservation API                                                                        |
-| reservationRefID                    | String     | Yes     | reservation ID on channel manager system                                                                           |
-| bookingStatus                       | String     | Yes     | booking statuseg. "book", "modify" and "delete"                                                                    |
-| createDateTime                      | String     | Yes     | booking create date time on channel                                                                                |
-| updateDateTime                      | String     | No      | booking update date time on channel                                                                                |
-| pos                                 | Object     | Yes     | point of sale for reservation item                                                                                 |
-| pos > channelType                   | String     | Yes     | type of channel                                                                                                    |
-| pos > channelRefID                  | String     | Yes     | channel referenceID                                                                                                |
-| pos > channelCode                   | String     | Yes     | channel code                                                                                                       |
-| pos > channelName                   | String     | Yes     | channel name                                                                                                       |
-| pos > channelReservationID          | String     | Yes     | reservationID from OTA                                                                                             |
-| roomList                            | Array      | Yes     | list of room on reservation<br/>* <span style="color: orange">**See. Room Item specification**</span>              |
-| serviceList                         | Array      | No      | list of service on reservation<br/>* <span style="color: orange">**See. Service Item specification**</span>        |
-| guestList                           | Array      | No      | list of guest on reservation<br/>* <span style="color: orange">**See. Guest Item specification**</span>            |
-| bookingInformation                  | Object     | Yes     | booking information for reservation<br/>* <span style="color: orange">**See. Booking Information specific**</span> |
+| Field Name                          | Value Type | Require | Description                                                                                                              |
+|-------------------------------------|------------|---------|--------------------------------------------------------------------------------------------------------------------------|
+| uniqueID                            | String     | Yes     | Item uniqID for acknowledge reservation API                                                                              |
+| reservationRefID                    | String     | Yes     | reservation ID on channel manager system                                                                                 |
+| bookingStatus                       | String     | Yes     | booking statuseg. "book", "modify" and "delete"                                                                          |
+| createDateTime                      | String     | Yes     | booking create date time on channel                                                                                      |
+| updateDateTime                      | String     | No      | booking update date time on channel                                                                                      |
+| pos                                 | Object     | Yes     | point of sale for reservation item                                                                                       |
+| pos > channelType                   | String     | Yes     | type of channel                                                                                                          |
+| pos > channelRefID                  | String     | Yes     | channel referenceID                                                                                                      |
+| pos > channelCode                   | String     | Yes     | channel code                                                                                                             |
+| pos > channelName                   | String     | Yes     | channel name                                                                                                             |
+| pos > channelReservationID          | String     | Yes     | reservationID from OTA                                                                                                   |
+| roomList                            | Array      | Yes     | list of room on reservation<br/> See [RoomItemSpecification](push-reservation.md#RoomItemSpecification)                  |
+| serviceList                         | Array      | No      | list of service on reservation<br/>See. [ServiceItemSpecification](push-reservation.md#ServiceItemSpecification)         |
+| guestList                           | Array      | No      | list of guest on reservation<br/>See. [GuestItemSpecification](push-reservation.md#GuestItemSpecification)               |
+| bookingInformation                  | Object     | Yes     | booking information for reservation<br/>See [BookingInformationSpecific](push-reservation.md#BookingInformationSpecific) |
 
-- <span style="color: orange">**Room Item Specification**</span>
+#### RoomItemSpecification
 
 | Field Name                                                      | Value Type  | Require  | Description                                 |
 |-----------------------------------------------------------------|-------------|----------|---------------------------------------------|
@@ -300,7 +300,7 @@ Channel Manager push reservation data to your PMS
 | specialRequest                                                  | String      | No       | special request                             |
 | remark                                                          | String      | No       | remark                                      |
 
-- <span style="color: orange">**Service Item Specification**</span>
+#### ServiceItemSpecification
 
 | Field Name                                           | Value Type | Require | Description                                                                                   |
 |------------------------------------------------------|------------|---------|-----------------------------------------------------------------------------------------------|
@@ -316,7 +316,7 @@ Channel Manager push reservation data to your PMS
 | price > totalAmountDescription > feeAmount           | String     | No      | fee amount                                                                                    |
 | price > totalAmountDescription > taxAmount           | String     | No      | tax amount                                                                                    |
 
-- <span style="color: orange">**Guest Item Specification**</span>
+#### GuestItemSpecification
 
 | Field Name                | Value Type | Require | Description                    |
 |---------------------------|------------|---------|--------------------------------|
@@ -338,7 +338,7 @@ Channel Manager push reservation data to your PMS
 | note > arrivalTime        | String     | No      | arrival time                   |
 | note > arrivalFlight      | String     | No      | arrival flight                 |
 
-- <span style="color: orange">**Booking Information Specification**</span>
+#### BookingInformationSpecific
 
 | Field Name                                                          | Value Type | Require | Description                          |
 |---------------------------------------------------------------------|------------|---------|--------------------------------------|
