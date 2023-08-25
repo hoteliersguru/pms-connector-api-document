@@ -58,17 +58,17 @@ https://hoteliers.guru/channel-manager/api/pms-connector/update-room-rate
 ```
 
 ### Request JSON Data Specification
-| Field Name    | Value Type | Require | Description                                                                                      |
-|---------------|------------|---------|--------------------------------------------------------------------------------------------------|
-| timestamp     | String     | Yes     | 2005-08-01T09:30:47+08:00                                                                        |
-| transactionID | String     | Yes     | UniqID                                                                                           |
-| username      | String     | Yes     | Username from channel manager                                                                    |
-| password      | String     | Yes     | Password from channel manager                                                                    |
-| pmsRefID      | String     | Yes     | PMS Reference ID                                                                                 |
-| hotelRefID    | String     | Yes     | Hotel Reference ID                                                                               |
-| periodList    | Array      | Yes     | period update data List<br>* <span style="color: orange">**See PeriodList Specification**</span> |
+| Field Name    | Value Type | Require | Description                                                                                             |
+|---------------|------------|---------|---------------------------------------------------------------------------------------------------------|
+| timestamp     | String     | Yes     | 2005-08-01T09:30:47+08:00                                                                               |
+| transactionID | String     | Yes     | UniqID                                                                                                  |
+| username      | String     | Yes     | Username from channel manager                                                                           |
+| password      | String     | Yes     | Password from channel manager                                                                           |
+| pmsRefID      | String     | Yes     | PMS Reference ID                                                                                        |
+| hotelRefID    | String     | Yes     | Hotel Reference ID                                                                                      |
+| periodList    | Array      | Yes     | period update data List<br> See [PeriodListSpecification](update-room-rate.md#PeriodListSpecification). |
 
-- <span style="color: orange">**PeriodList Specification**</span>
+### PeriodListSpecification
 
 | Field Name     | Value Type           | Require | Description                                                                                                       |
 |----------------|----------------------|---------|-------------------------------------------------------------------------------------------------------------------|
