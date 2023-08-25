@@ -5,7 +5,7 @@ API PMS Connector for the Channel Manager
 
 ### Public API's currently available
 
-* [VersionDetail](apis/version-detail/)
+* [VersionDetail](apis/version-detail.md)
 * [API:GetRoomRateList](apis/appconnect/)
 * [API:PushReservation (Recommended)](apis/appconnect/)
 * [API:RetrieveReservation](apis/appconnect/)
