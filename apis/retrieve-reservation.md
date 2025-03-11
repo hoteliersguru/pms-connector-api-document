@@ -1,5 +1,5 @@
 # API : Retrieve Reservation
-API for retrieve reservation list from all OTA and use pull base time : 5 - 10 minutes
+API for retrieve reservation list from all OTA and use pull base time: 5 - 10 minutes
 
 ### Endpoint
 ```text
