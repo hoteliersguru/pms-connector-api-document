@@ -342,54 +342,55 @@ Channel Manager push reservation data to your PMS
 
 #### BookingInformationSpecific
 
-| Field Name                                                          | Value Type | Require | Description                          |
-|---------------------------------------------------------------------|------------|---------|--------------------------------------|
-| remark                                                              | String     | No      | remark for reservation item          |
-| totalGuestCount                                                     | Object     | No      | total guest count information        |
-| totalGuestCount > adult                                             | 0..n       | No      | total adult                          |
-| totalGuestCount > child                                             | 0..n       | No      | total child                          |
-| totalGuestCount > infant                                            | 0..n       | No      | total infant                         |
-| totalGuestCount > total                                             | 0..n       | No      | total guest                          |
-| totalGuestCount > remark                                            | String     | No      | remark for guest                     |
-| customerProfile                                                     | Object     | Yes     | profile of customer                  |
-| customerProfile > firstName                                         | String     | Yes     | first name                           |
-| customerProfile > lastName                                          | String     | Yes     | last name                            |
-| customerProfile > email                                             | String     | Yes     | email                                |
-| customerProfile > phone                                             | String     | Yes     | phone                                |
-| customerProfile > address                                           | Object     | Yes     | address data                         |
-| customerProfile > address > address                                 | String     | Yes     | address                              |
-| customerProfile > address > city                                    | String     | Yes     | city                                 |
-| customerProfile > address > state                                   | String     | Yes     | state or province                    |
-| customerProfile > address > postalCode                              | String     | Yes     | postal code                          |
-| customerProfile > address > countryCode                             | String     | Yes     | country code                         |
-| guarantee                                                           | Object     | No      | guarantee information                |
-| guarantee > paymentCard                                             | Object     | No      | payment card information             |
-| guarantee > paymentCard > code                                      | String     | No      | card code                            |
-| guarantee > paymentCard > number                                    | String     | No      | card number                          |
-| guarantee > paymentCard > expireDate                                | String     | No      | card expire date format MMYY         |
-| guarantee > paymentCard > cardHolderName                            | String     | No      | card holder name                     |
-| depositPayment                                                      | Object     | No      | deposit payment information          |
-| depositPayment > currencyCode                                       | String     | No      | currency code                        |
-| depositPayment > amount                                             | String     | No      | deposit amount                       |
-| depositPayment > paymentCard                                        | Object     | No      | payment card information             |
-| depositPayment > paymentCard > code                                 | String     | No      | card code                            |
-| depositPayment > paymentCard > number                               | String     | No      | card number                          |
-| depositPayment > paymentCard > expireDate                           | String     | No      | card expire date format MMYY         |
-| depositPayment > paymentCard > cardHoldername                       | String     | No      | card holder name                     |
-| summaryTotalAmount                                                  | Object     | Yes     | summary total amount for reservation |
-| summaryTotalAmount > currencyCode                                   | String     | Yes     | currency code                        |
-| summaryTotalAmount > grandTotalAmount                               | String     | Yes     | grand total amount                   |
-| summaryTotalAmount > commissionAmount                               | String     | No      | commission amount                    |
-| summaryTotalAmount > cancellationFeeAmount                          | String     | No      | cancellation fee amount              |
-| summaryTotalAmount > grandTotalDescription                          | Object     | Yes     | grand total amount information       |
-| summaryTotalAmount > grandTotalDescription > totalRoomStayBeforeTax | String     | Yes     | total room stay amount before tax    |
-| summaryTotalAmount > grandTotalDescription > totalServiceBeforeTax  | String     | No      | total service before tax             |
-| summaryTotalAmount > grandTotalDescription > totalDiscount          | String     | No      | total discount amount                |
-| summaryTotalAmount > grandTotalDescription > totalExtraAdult        | String     | No      | total extra adult amount             |
-| summaryTotalAmount > grandTotalDescription > totalExtraChild        | String     | No      | total extra child amount             |
-| summaryTotalAmount > grandTotalDescription > totalExtraBed          | String     | No      | total extra bed amount               |
-| summaryTotalAmount > grandTotalDescription > totalExtraNight        | String     | No      | total extra night                    |
-| summaryTotalAmount > grandTotalDescription > totalEnhancementAmount | String     | No      | total enhancement amount             |
-| summaryTotalAmount > grandTotalDescription > totalSurcharge         | String     | No      | total surcharge amount               |
-| summaryTotalAmount > grandTotalDescription > totalFeeAmount         | String     | No      | total fee amount                     |
-| summaryTotalAmount > grandTotalDescription > totalTaxAmount         | String     | No      | total tax amount                     |
+| Field Name                                                          | Value Type  | Require | Description                                                                                                              |
+|---------------------------------------------------------------------|-------------|---------|--------------------------------------------------------------------------------------------------------------------------|
+| remark                                                              | String      | No      | remark for reservation item                                                                                              |
+| totalGuestCount                                                     | Object      | No      | total guest count information                                                                                            |
+| totalGuestCount > adult                                             | 0..n        | No      | total adult                                                                                                              |
+| totalGuestCount > child                                             | 0..n        | No      | total child                                                                                                              |
+| totalGuestCount > infant                                            | 0..n        | No      | total infant                                                                                                             |
+| totalGuestCount > total                                             | 0..n        | No      | total guest                                                                                                              |
+| totalGuestCount > remark                                            | String      | No      | remark for guest                                                                                                         |
+| customerProfile                                                     | Object      | Yes     | profile of customer                                                                                                      |
+| customerProfile > firstName                                         | String      | Yes     | first name                                                                                                               |
+| customerProfile > lastName                                          | String      | Yes     | last name                                                                                                                |
+| customerProfile > email                                             | String      | Yes     | email                                                                                                                    |
+| customerProfile > phone                                             | String      | Yes     | phone                                                                                                                    |
+| customerProfile > address                                           | Object      | Yes     | address data                                                                                                             |
+| customerProfile > address > address                                 | String      | Yes     | address                                                                                                                  |
+| customerProfile > address > city                                    | String      | Yes     | city                                                                                                                     |
+| customerProfile > address > state                                   | String      | Yes     | state or province                                                                                                        |
+| customerProfile > address > postalCode                              | String      | Yes     | postal code                                                                                                              |
+| customerProfile > address > countryCode                             | String      | Yes     | country code                                                                                                             |
+| guarantee                                                           | Object      | No      | guarantee information                                                                                                    |
+| guarantee > paymentCard                                             | Object      | No      | payment card information                                                                                                 |
+| guarantee > paymentCard > code                                      | String      | No      | card code                                                                                                                |
+| guarantee > paymentCard > number                                    | String      | No      | card number                                                                                                              |
+| guarantee > paymentCard > expireDate                                | String      | No      | card expire date format MMYY                                                                                             |
+| guarantee > paymentCard > cardHolderName                            | String      | No      | card holder name                                                                                                         |
+| depositPayment                                                      | Object      | No      | deposit payment information                                                                                              |
+| depositPayment > currencyCode                                       | String      | No      | currency code                                                                                                            |
+| depositPayment > amount                                             | String      | No      | deposit amount                                                                                                           |
+| depositPayment > paymentCard                                        | Object      | No      | payment card information                                                                                                 |
+| depositPayment > paymentCard > code                                 | String      | No      | card code                                                                                                                |
+| depositPayment > paymentCard > number                               | String      | No      | card number                                                                                                              |
+| depositPayment > paymentCard > expireDate                           | String      | No      | card expire date format MMYY                                                                                             |
+| depositPayment > paymentCard > cardHoldername                       | String      | No      | card holder name                                                                                                         |
+| summaryTotalAmount                                                  | Object      | Yes     | summary total amount for reservation                                                                                     |
+| summaryTotalAmount > currencyCode                                   | String      | Yes     | currency code                                                                                                            |
+| summaryTotalAmount > grandTotalAmount                               | String      | Yes     | grand total amount                                                                                                       |
+| summaryTotalAmount > includesCommission                             | String      | No      | "1" = total amount is include commission<br/>"0" = total amount not is include commission<br/>"" (empty value) = Unknown |
+| summaryTotalAmount > commissionAmount                               | String      | No      | commission amount                                                                                                        |
+| summaryTotalAmount > cancellationFeeAmount                          | String      | No      | cancellation fee amount                                                                                                  |
+| summaryTotalAmount > grandTotalDescription                          | Object      | Yes     | grand total amount information                                                                                           |
+| summaryTotalAmount > grandTotalDescription > totalRoomStayBeforeTax | String      | Yes     | total room stay amount before tax                                                                                        |
+| summaryTotalAmount > grandTotalDescription > totalServiceBeforeTax  | String      | No      | total service before tax                                                                                                 |
+| summaryTotalAmount > grandTotalDescription > totalDiscount          | String      | No      | total discount amount                                                                                                    |
+| summaryTotalAmount > grandTotalDescription > totalExtraAdult        | String      | No      | total extra adult amount                                                                                                 |
+| summaryTotalAmount > grandTotalDescription > totalExtraChild        | String      | No      | total extra child amount                                                                                                 |
+| summaryTotalAmount > grandTotalDescription > totalExtraBed          | String      | No      | total extra bed amount                                                                                                   |
+| summaryTotalAmount > grandTotalDescription > totalExtraNight        | String      | No      | total extra night                                                                                                        |
+| summaryTotalAmount > grandTotalDescription > totalEnhancementAmount | String      | No      | total enhancement amount                                                                                                 |
+| summaryTotalAmount > grandTotalDescription > totalSurcharge         | String      | No      | total surcharge amount                                                                                                   |
+| summaryTotalAmount > grandTotalDescription > totalFeeAmount         | String      | No      | total fee amount                                                                                                         |
+| summaryTotalAmount > grandTotalDescription > totalTaxAmount         | String      | No      | total tax amount                                                                                                         |
