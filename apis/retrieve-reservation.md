@@ -287,49 +287,49 @@ https://hoteliers.guru/channel-manager/api/pms-connector/reservation
 
 #### RoomItemSpecification
 
-| Field Name                                                      | Value Type | Require | Description                                                |
-|-----------------------------------------------------------------|------------|---------|------------------------------------------------------------|
-| start                                                           | String     | Yes     | checkin date                                               |
-| end                                                             | String     | Yes     | checkout date                                              |
-| roomTypeCode                                                    | String     | Yes     | PMS room type code                                         |
-| ratePlanCode                                                    | String     | Yes     | PMS rate plan code                                         |
-| channelRoomTypeCode                                             | String     | Yes     | Channel Manager room type code                             |
-| channelRatePlanCode                                             | String     | Yes     | Channel Manager rate plan code                             |
-| channelPaymentMethod                                            | String     | No      | Channel Payment Method ('PRE-PAID', 'PAY-AT-HOTEL', '')    |
-| amountInformation                                               | Object     | Yes     | amount information for room                                |
-| amountInformation >currencyCode                                 | String     | Yes     | currency code                                              |
-| amountInformation > totalAmount                                 | String     | Yes     | total amount for room                                      |
-| amountInformation > includeBreakfast                            | 0, 1, ''   | Yes     | 0 = exclude breakfast, 1 = include breakfast, '' = unknown |
-| amountInformation > totalAmountDescription                      | Object     | Yes     | total description                                          |
-| amountInformation >totalAmountDescription > baseAmountBeforeTax | String     | Yes     | base amount before TAX                                     |
-| amountInformation > totalAmountDescription > totalDiscount      | String     | No      | discount amount                                            |
-| amountInformation > totalAmountDescription > totalExtraAdult    | String     | No      | extra adult amount                                         |
-| amountInformation > totalAmountDescription > totalExtraChild    | String     | No      | extra child amount                                         |
-| amountInformation > totalAmountDescription > totalExtraBed      | String     | No      | extra bed amount                                           |
-| amountInformation > totalAmountDescription > totalExtraNight    | String     | No      | extra night amount                                         |
-| amountInformation > totalAmountDescription > totalAddonAmount   | String     | No      | addon amount                                               |
-| amountInformation > totalAmountDescription > totalSurcharge     | String     | No      | surcharge amount                                           |
-| amountInformation > totalAmountDescription > totalFeeAmount     | String     | No      | fee amount                                                 |
-| amountInformation > totalAmountDescription > totalTaxAmount     | String     | No      | tax amount                                                 |
-| rateList                                                        | Array      | Yes     | rate list for room                                         |
-| rateList > effectiveDate                                        | String     | Yes     | rate start date for period                                 |
-| rateList > expireDate                                           | String     | Yes     | rate end date for period                                   |
-| rateList > totalAmount                                          | String     | Yes     | total amount for period                                    |
-| rateList > pax                                                  | String     | No      | PAX for period                                             |
-| rateList > totalAmountDescription                               | Object     | Yes     | Total amount information for period                        |
-| rateList > totalAmountDescription > baseAmountAfterTax          | String     | Yes     | base amount after tax for period                           |
-| rateList > totalAmountDescription > feeAmount                   | String     | No      | fee amount for period                                      |
-| rateList > totalAmountDescription > taxAmount                   | String     | No      | tax amount for period                                      |
-| guestInformation                                                | Object     | No      | guest information for room                                 |
-| guestInformation > adult                                        | 0..n       | No      | total adult for room                                       |
-| guestInformation > child                                        | 0..n       | No      | total child for room                                       |
-| guestInformation > infant                                       | 0..n       | No      | total infant for room                                      |
-| guestInformation > total                                        | 0..n       | No      | total guest for room                                       |
-| guestInformation > remark                                       | String     | No      | remark                                                     |
-| guestInformation > guestList                                    | Array      | No      | guest list for room                                        |
-| serviceList                                                     | Array      | No      | service list for room                                      |
-| specialRequest                                                  | String     | No      | special request                                            |
-| remark                                                          | String     | No      | remark                                                     |
+| Field Name                                                      | Value Type | Require | Description                                             |
+|-----------------------------------------------------------------|------------|---------|---------------------------------------------------------|
+| start                                                           | String     | Yes     | checkin date                                            |
+| end                                                             | String     | Yes     | checkout date                                           |
+| roomTypeCode                                                    | String     | Yes     | PMS room type code                                      |
+| ratePlanCode                                                    | String     | Yes     | PMS rate plan code                                      |
+| channelRoomTypeCode                                             | String     | Yes     | Channel Manager room type code                          |
+| channelRatePlanCode                                             | String     | Yes     | Channel Manager rate plan code                          |
+| channelPaymentMethod                                            | String     | No      | Channel Payment Method ('PRE-PAID', 'PAY-AT-HOTEL', '') |
+| amountInformation                                               | Object     | Yes     | amount information for room                             |
+| amountInformation >currencyCode                                 | String     | Yes     | currency code                                           |
+| amountInformation > totalAmount                                 | String     | Yes     | total amount for room                                   |
+| amountInformation > includeBreakfast                            | 0, 1       | Yes     | 0 = exclude breakfast, 1 = include breakfast            |
+| amountInformation > totalAmountDescription                      | Object     | Yes     | total description                                       |
+| amountInformation >totalAmountDescription > baseAmountBeforeTax | String     | Yes     | base amount before TAX                                  |
+| amountInformation > totalAmountDescription > totalDiscount      | String     | No      | discount amount                                         |
+| amountInformation > totalAmountDescription > totalExtraAdult    | String     | No      | extra adult amount                                      |
+| amountInformation > totalAmountDescription > totalExtraChild    | String     | No      | extra child amount                                      |
+| amountInformation > totalAmountDescription > totalExtraBed      | String     | No      | extra bed amount                                        |
+| amountInformation > totalAmountDescription > totalExtraNight    | String     | No      | extra night amount                                      |
+| amountInformation > totalAmountDescription > totalAddonAmount   | String     | No      | addon amount                                            |
+| amountInformation > totalAmountDescription > totalSurcharge     | String     | No      | surcharge amount                                        |
+| amountInformation > totalAmountDescription > totalFeeAmount     | String     | No      | fee amount                                              |
+| amountInformation > totalAmountDescription > totalTaxAmount     | String     | No      | tax amount                                              |
+| rateList                                                        | Array      | Yes     | rate list for room                                      |
+| rateList > effectiveDate                                        | String     | Yes     | rate start date for period                              |
+| rateList > expireDate                                           | String     | Yes     | rate end date for period                                |
+| rateList > totalAmount                                          | String     | Yes     | total amount for period                                 |
+| rateList > pax                                                  | String     | No      | PAX for period                                          |
+| rateList > totalAmountDescription                               | Object     | Yes     | Total amount information for period                     |
+| rateList > totalAmountDescription > baseAmountAfterTax          | String     | Yes     | base amount after tax for period                        |
+| rateList > totalAmountDescription > feeAmount                   | String     | No      | fee amount for period                                   |
+| rateList > totalAmountDescription > taxAmount                   | String     | No      | tax amount for period                                   |
+| guestInformation                                                | Object     | No      | guest information for room                              |
+| guestInformation > adult                                        | 0..n       | No      | total adult for room                                    |
+| guestInformation > child                                        | 0..n       | No      | total child for room                                    |
+| guestInformation > infant                                       | 0..n       | No      | total infant for room                                   |
+| guestInformation > total                                        | 0..n       | No      | total guest for room                                    |
+| guestInformation > remark                                       | String     | No      | remark                                                  |
+| guestInformation > guestList                                    | Array      | No      | guest list for room                                     |
+| serviceList                                                     | Array      | No      | service list for room                                   |
+| specialRequest                                                  | String     | No      | special request                                         |
+| remark                                                          | String     | No      | remark                                                  |
 
 #### ServiceItemSpecification
 
